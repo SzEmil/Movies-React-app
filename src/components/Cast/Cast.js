@@ -20,16 +20,18 @@ export const Cast = () => {
   return (
     <>
       {error && <p>Oh, something went wrong :c error: {error.message}</p>}
-      {movies.map(movie => (
-        <li key={movie.id}>
-          <p>{movie.name}</p>
-          <p>{movie.character}</p>
-          <img
-            src={`https://image.tmdb.org/t/p/w200${movie.profile_path}`}
-            alt="som pic"
-          />
-        </li>
-      ))}
+      <ul style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+        {movies.map(movie => (
+          <li key={movie.id}>
+            <p>{movie.name}</p>
+            <p>{movie.character}</p>
+            <img
+              src={`https://image.tmdb.org/t/p/w200${movie.profile_path}`}
+              alt="som pic"
+            />
+          </li>
+        ))}
+      </ul>
     </>
   );
 };
