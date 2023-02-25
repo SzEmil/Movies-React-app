@@ -4,6 +4,8 @@ import { MoviesList } from 'components/MoviesList/MoviesList';
 import { Loader } from 'components/Loader/Loader';
 import { useState, useEffect } from 'react';
 import { useMovieContext } from 'components/MovieContext/MovieContext';
+import css from '../components/MoviesList/MovieList.module.css';
+import clsx from 'clsx';
 export const Home = () => {
   const { movies, setMovies } = useMovieContext();
 
@@ -26,11 +28,11 @@ export const Home = () => {
   }, [setMovies]);
 
   return (
-    <>
-      <h2>Trending today</h2>
+    <div className={clsx(css.movieListContainer)}>
+      <h2 className={clsx(css.title)}>Trending today</h2>
       {error && <p>Oh, something went wrong :c error: {error.message}</p>}
       {movies.length !== 0 && <MoviesList movies={movies} />}
       <Loader isLoading={isLoading} />
-    </>
+    </div>
   );
 };
