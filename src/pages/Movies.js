@@ -17,7 +17,7 @@ export const Movies = () => {
 
   const handleOnSubmit = async query => {
     setIsLoading(true);
-
+    console.log(searchParams);
     const nextParams = query !== '' ? { query } : {};
     setSearchParams(nextParams);
 
