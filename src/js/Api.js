@@ -19,7 +19,7 @@ export const getMoviesById = async movieId => {
   const response = await axios.get(
     `https://api.themoviedb.org/3/movie/${movieId}?api_key=5349b69c770fce41df09c49c43dbcd6b&language=en-US`
   );
-
+  console.log(response.data);
   return response.data;
 };
 
