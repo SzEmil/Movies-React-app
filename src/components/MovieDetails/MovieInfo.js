@@ -1,5 +1,5 @@
 export const MovieInfo = ({ movie }) => {
-  console.log(movie);
+  // console.log(movie);
   return (
     <>
       <h2>{movie.title}</h2>
