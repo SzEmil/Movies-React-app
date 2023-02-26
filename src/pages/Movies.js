@@ -11,7 +11,7 @@ import clsx from 'clsx';
 
 const Movies = () => {
   const { movies, setMovies } = useMovieContext();
-
+  const [querySearch, setQuery] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [isLoading, setIsLoading] = useState(false);
@@ -22,18 +22,25 @@ const Movies = () => {
     const nextParams = query !== '' ? { query } : {};
     setSearchParams(nextParams);
 
-    const queryUrl = searchParams.get('query');
-    console.log(queryUrl);
-    if (queryUrl === null) return;
-    try {
-      const queryMovies = await getMoviesByQuery(query);
-      setMovies(queryMovies);
-    } catch (error) {
-      setError(error);
-    } finally {
-      setIsLoading(false);
-    }
+    setQuery(searchParams.get('query'));
+
   };
+
+  useEffect(() => {
+    console.log('witam');
+    const findMovies = async () => {
+      try {
+        const queryMovies = await getMoviesByQuery(querySearch);
+        setMovies(queryMovies);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    findMovies();
+  }, [querySearch, setMovies]);
 
   useEffect(() => {
     setMovies([]);
