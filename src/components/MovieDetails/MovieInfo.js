@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import css from './MovieInfo.module.css';
-
 export const MovieInfo = ({ movie }) => {
   return (
     <>

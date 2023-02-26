@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import css from './MovieList.module.css';
+import { useLocation } from 'react-router-dom';
 export const MoviesList = ({ movies }) => {
+  const location = useLocation();
   return (
     <>
       <ul
@@ -17,7 +19,7 @@ export const MoviesList = ({ movies }) => {
       >
         {movies.map(movie => (
           <li key={movie.id} className={clsx(css.movieItem)}>
-            <Link to={`/movies/${movie.id}`}>
+            <Link to={`/movies/${movie.id}`} state={{ from: location }}>
               <div
                 style={{
                   display: 'inline-flex',

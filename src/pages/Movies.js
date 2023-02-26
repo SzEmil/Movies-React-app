@@ -18,12 +18,14 @@ export const Movies = () => {
 
   const handleOnSubmit = async query => {
     setIsLoading(true);
-    console.log(searchParams);
     const nextParams = query !== '' ? { query } : {};
     setSearchParams(nextParams);
 
+    const queryUrl = searchParams.get('query');
+    console.log(queryUrl);
+    if (queryUrl === null) return;
     try {
-      const queryMovies = await getMoviesByQuery(query);
+      const queryMovies = await getMoviesByQuery(queryUrl);
       setMovies(queryMovies);
     } catch (error) {
       setError(error);
