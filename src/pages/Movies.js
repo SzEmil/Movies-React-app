@@ -8,7 +8,8 @@ import { Loader } from 'components/Loader/Loader';
 import { useSearchParams } from 'react-router-dom';
 import css from '../components/MoviesList/MovieList.module.css';
 import clsx from 'clsx';
-export const Movies = () => {
+
+const Movies = () => {
   const { movies, setMovies } = useMovieContext();
 
   const [searchParams, setSearchParams] = useSearchParams();
@@ -25,7 +26,7 @@ export const Movies = () => {
     console.log(queryUrl);
     if (queryUrl === null) return;
     try {
-      const queryMovies = await getMoviesByQuery(queryUrl);
+      const queryMovies = await getMoviesByQuery(query);
       setMovies(queryMovies);
     } catch (error) {
       setError(error);
@@ -48,3 +49,5 @@ export const Movies = () => {
     </>
   );
 };
+
+export default Movies;

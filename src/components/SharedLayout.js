@@ -2,7 +2,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import clsx from 'clsx';
 import css from './SharedLayout.module.css';
 import styled from 'styled-components';
-
+import { Suspense } from 'react';
 const StyledLink = styled(NavLink)`
   color: white;
 
@@ -31,7 +31,9 @@ export const SharedLayout = () => {
           </StyledLink>
         </nav>
       </header>
-      <Outlet />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };
