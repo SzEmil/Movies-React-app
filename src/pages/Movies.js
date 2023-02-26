@@ -11,7 +11,7 @@ import clsx from 'clsx';
 
 const Movies = () => {
   const { movies, setMovies } = useMovieContext();
-  const [querySearch, setQuery] = useState('');
+  // const [querySearch, setQuery] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [isLoading, setIsLoading] = useState(false);
@@ -22,25 +22,36 @@ const Movies = () => {
     const nextParams = query !== '' ? { query } : {};
     setSearchParams(nextParams);
 
-    setQuery(searchParams.get('query'));
+    console.log(searchParams);
+    // setQuery(searchParams.get('query'));
 
+    try {
+      const queryMovies = await getMoviesByQuery(query);
+      setMovies(queryMovies);
+    } catch (error) {
+      setError(error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
-  useEffect(() => {
-    console.log('witam');
-    const findMovies = async () => {
-      try {
-        const queryMovies = await getMoviesByQuery(querySearch);
-        setMovies(queryMovies);
-      } catch (error) {
-        setError(error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
+  // useEffect(() => {
 
-    findMovies();
-  }, [querySearch, setMovies]);
+  //   console.log(querySearch);
+  //   const findMovies = async () => {
+  //     try {
+  //       console.log('fetchuje', querySearch);
+  //       const queryMovies = await getMoviesByQuery(querySearch);
+  //       setMovies(queryMovies);
+  //     } catch (error) {
+  //       setError(error);
+  //     } finally {
+  //       setIsLoading(false);
+  //     }
+  //   };
+
+  //   findMovies();
+  // }, [querySearch, setMovies]);
 
   useEffect(() => {
     setMovies([]);

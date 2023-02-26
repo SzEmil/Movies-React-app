@@ -74,3 +74,8 @@
   width: 15px;
   margin-right: 5px;
 }
+
+.movieListNoImg {
+  width: 300px;
+  height: 450px;
+}

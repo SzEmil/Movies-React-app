@@ -27,12 +27,19 @@ export const MoviesList = ({ movies }) => {
                 }}
               >
                 <div className={clsx(css.movieImgContainer)}>
-                  <img
-                    className={clsx(css.movieImg)}
-                    src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-                    alt="som pic"
-                  />
-
+                  {movie.poster_path === null ? (
+                    <img
+                      className={clsx(css.movieListNoImg)}
+                      src="https://www.izba.lodz.pl/wp-content/themes/consultix/images/no-image-found-360x260.png"
+                      alt="no pic found"
+                    />
+                  ) : (
+                    <img
+                      className={clsx(css.movieImg)}
+                      src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+                      alt="som pic"
+                    />
+                  )}
                   <div className={clsx(css.movieDesription)}>
                     <p>{movie.original_title}</p>
                     <p>{movie.release_date}</p>
