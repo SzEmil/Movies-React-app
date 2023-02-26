@@ -21,9 +21,8 @@ const Movies = () => {
     const nextParams = query !== '' ? { query } : {};
     setSearchParams(nextParams);
   };
-
+  const queryUrl = searchParams.get('query');
   useEffect(() => {
-    const queryUrl = searchParams.get('query');
     if (queryUrl === null) return;
     const findMovies = async () => {
       try {
@@ -37,7 +36,7 @@ const Movies = () => {
     };
 
     findMovies();
-  }, [searchParams, setMovies]);
+  }, [setMovies, queryUrl]);
 
   useEffect(() => {
     setMovies([]);
