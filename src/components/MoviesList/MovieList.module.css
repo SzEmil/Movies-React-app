@@ -62,3 +62,15 @@
   text-transform: uppercase;
   color: white;
 }
+
+.movieVote {
+  padding: 6px;
+  background-color: red;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.movieIcon {
+  width: 15px;
+  margin-right: 5px;
+}

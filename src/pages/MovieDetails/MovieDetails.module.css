@@ -1,0 +1,32 @@
+.MovieDetailsContainer {
+  margin: 0 100px 0 100px;
+}
+.movieDetailsLink {
+  color: white;
+  font-style: normal;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+
+
+  transition: color 250ms ease;
+}
+.movieDetailsLink:hover {
+  color: red;
+}
+
+.movieDetailsLink:nth-child(1) {
+  margin-right: 15px;
+}
+.movieDetailsLink:nth-child(3) {
+  margin-left: 15px;
+}
+.movieDetailsSpan {
+  color: white;
+  line-height: 21px;
+  font-size: 18px;
+}
+.activeLink {
+  color: red;
+}

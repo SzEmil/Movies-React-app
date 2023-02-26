@@ -8,7 +8,6 @@ import css from '../components/MoviesList/MovieList.module.css';
 import clsx from 'clsx';
 export const Home = () => {
   const { movies, setMovies } = useMovieContext();
-
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 

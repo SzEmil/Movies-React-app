@@ -1,3 +1,6 @@
+import clsx from 'clsx';
+import css from './SearchMovieForm.module.css';
+
 export const SearchMovieForm = ({ onSubmit }) => {
   const handleFormOnSubmit = event => {
     event.preventDefault();
@@ -7,15 +10,18 @@ export const SearchMovieForm = ({ onSubmit }) => {
     form.reset();
   };
   return (
-    <form onSubmit={handleFormOnSubmit}>
-      <button type="submit">Search</button>
+    <form className={css.searchForm} onSubmit={handleFormOnSubmit}>
       <input
+        className={css.searchInput}
         type="text"
         autoComplete="off"
         autoFocus
-        placeholder="Search images and photos"
+        placeholder="Search videos"
         name="text"
       />
+      <button className={clsx(css.searchButton)} type="submit">
+        Search
+      </button>
     </form>
   );
 };

@@ -1,0 +1,67 @@
+.movieInfoContainer {
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 300;
+  /* border-bottom: 1px solid white;
+  border-top: 1px solid white; */
+}
+
+.movieInfoOverview {
+  width: 800px;
+  font-style: normal;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+}
+.movieInfoImg {
+  margin-right: 300px;
+  border-radius: 2px;
+  border: 1px solid white;
+}
+.movieInfoBaner {
+  z-index: -1;
+  right: 0;
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.movieInfoTitles {
+  color: white;
+  font-style: normal;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 38px;
+}
+.movieInfoDescriptionHeader {
+  color: red;
+  font-style: normal;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+.movieInfoHomepageLink {
+  color: white;
+  padding: 7px;
+  background-color: red;
+
+  font-style: normal;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 42px;
+  border-radius: 15px;
+
+  transition: background-color 250ms ease;
+}
+.movieInfoHomepageLink:hover {
+  background-color: rgb(153, 0, 0);
+}

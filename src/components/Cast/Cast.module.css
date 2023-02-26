@@ -1,0 +1,30 @@
+.castName {
+  color: white;
+  font-style: normal;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 18px;
+  margin: 0;
+  padding-top: 10px;
+}
+.castCharacter {
+  color: rgb(151, 151, 151);
+  font-style: normal;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+  padding-top: 5px;
+}
+.castNoImg {
+  width: 200px;
+  height: 300px;
+}
+.castDescriptionBox {
+  width: 200px;
+}
+.castImg {
+  border-radius: 2px;
+}

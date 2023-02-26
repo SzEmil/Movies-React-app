@@ -1,0 +1,16 @@
+.revievHeader {
+  color: white;
+  font-style: normal;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+.revievContent {
+  color: white;
+  font-style: normal;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+}
