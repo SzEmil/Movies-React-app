@@ -79,7 +79,7 @@ const Movies = () => {
       <div className={clsx(css.movieListContainer)}>
         <SearchMovieForm onSubmit={handleOnSubmit} />
         {error && <p>Oh, something went wrong :c error: {error.message}</p>}
-        {movies.length === 0 ? (
+        {movies.length === 0 && pageNumber === 1 ? (
           <p className={clsx(css.movieListNoMovies)}>
             sorry, video you looking for doesn't exist
           </p>
