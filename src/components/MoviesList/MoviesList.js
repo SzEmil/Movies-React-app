@@ -7,25 +7,11 @@ export const MoviesList = ({ movies }) => {
   const location = useLocation();
   return (
     <>
-      <ul
-        style={{
-          display: 'inline-flex',
-          flexWrap: 'wrap',
-          gap: '20px',
-          paddingLeft: '0',
-          margin: '0',
-          justifyContent: 'center',
-        }}
-      >
+      <ul className={clsx(css.movieList)}>
         {movies.map(movie => (
           <li key={movie.id} className={clsx(css.movieItem)}>
             <Link to={`/movies/${movie.id}`} state={{ from: location }}>
-              <div
-                style={{
-                  display: 'inline-flex',
-                  flexDirection: 'column',
-                }}
-              >
+              <div className={clsx(css.movieListCard)}>
                 <div className={clsx(css.movieImgContainer)}>
                   {movie.poster_path === null ? (
                     <img

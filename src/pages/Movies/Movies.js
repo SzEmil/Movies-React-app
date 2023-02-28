@@ -6,7 +6,7 @@ import { getMoviesByQuery } from 'js/Api';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import { Loader } from 'components/Loader/Loader';
 import { useSearchParams } from 'react-router-dom';
-import css from '../components/MoviesList/MovieList.module.css';
+import css from './Movies.module.css';
 import clsx from 'clsx';
 
 const Movies = () => {

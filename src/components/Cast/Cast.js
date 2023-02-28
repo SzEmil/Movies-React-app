@@ -22,7 +22,7 @@ export const Cast = () => {
   return (
     <>
       {error && <p>Oh, something went wrong :c error: {error.message}</p>}
-      <ul style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+      <ul className={clsx(css.castList)}>
         {movies.map(movie => (
           <li key={movie.id}>
             {movie.profile_path === null ? (

@@ -1,3 +1,8 @@
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 .castName {
   color: white;
   font-style: normal;

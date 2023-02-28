@@ -5,7 +5,18 @@
   justify-content: center;
   flex-direction: column;
 }
-
+.movieList {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-left: 0;
+  margin: 0;
+  justify-content: center;
+}
+.movieListCard {
+  display: inline-flex;
+  flex-direction: column;
+}
 .title {
   color: white;
   font-style: normal;

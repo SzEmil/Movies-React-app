@@ -1,0 +1,7 @@
+.movieListContainer {
+  margin: 0 100px 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

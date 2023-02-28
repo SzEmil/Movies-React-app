@@ -4,7 +4,7 @@ import { MoviesList } from 'components/MoviesList/MoviesList';
 import { Loader } from 'components/Loader/Loader';
 import { useState, useEffect } from 'react';
 import { useMovieContext } from 'components/MovieContext/MovieContext';
-import css from '../components/MoviesList/MovieList.module.css';
+import css from './Home.module.css';
 import clsx from 'clsx';
 
 const Home = () => {
@@ -28,7 +28,7 @@ const Home = () => {
   }, [setMovies]);
 
   return (
-    <div className={clsx(css.movieListContainer)}>
+    <div className={clsx(css.homeContainer)}>
       <h2 className={clsx(css.title)}>Trending today</h2>
       {error && <p>Oh, something went wrong :c error: {error.message}</p>}
       {movies.length !== 0 && <MoviesList movies={movies} />}

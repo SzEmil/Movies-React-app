@@ -8,7 +8,6 @@ import { BtnGoBack } from 'components/BtnGoBack/BtnGoBack';
 import styled from 'styled-components';
 import clsx from 'clsx';
 import css from './MovieDetails.module.css';
-// import { useLocation } from 'react-router-dom';
 
 const StyledLink = styled(NavLink)`
   color: white;
@@ -19,9 +18,6 @@ const StyledLink = styled(NavLink)`
 `;
 
 export const MovieDetails = () => {
-  // const location = useLocation();
-  // const backLinkHref = location.state?.from ?? '/movies';
-
   const { movieId } = useParams();
   const [movie, setMovie] = useState();
   const [error, setError] = useState(null);
@@ -40,7 +36,7 @@ export const MovieDetails = () => {
   return (
     <>
       {error && <p>Oh, something went wrong :c error: {error.message}</p>}
-      <div style={{ margin: '0 100px 0 100px' }}>
+      <div className={clsx(css.movieDetailsContainer)}>
         <BtnGoBack />
         {movie !== undefined && <MovieInfo movie={movie} />}
         <div style={{ marginTop: '20px' }}>

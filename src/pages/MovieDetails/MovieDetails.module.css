@@ -1,4 +1,4 @@
-.MovieDetailsContainer {
+.movieDetailsContainer {
   margin: 0 100px 0 100px;
 }
 .movieDetailsLink {
@@ -8,7 +8,6 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-
 
   transition: color 250ms ease;
 }
