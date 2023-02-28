@@ -5,3 +5,28 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.movieListBtnWrapper {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.movieListPage {
+  color: white;
+  font-style: normal;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+
+  padding: 0 10px 0 10px;
+}
+.movieListNoMovies {
+  color: white;
+  font-style: normal;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}

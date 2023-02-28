@@ -8,9 +8,9 @@ export const getTrending = async () => {
   return response.data.results;
 };
 
-export const getMoviesByQuery = async query => {
+export const getMoviesByQuery = async (query, pageNum) => {
   const response = await axios.get(
-    `https://api.themoviedb.org/3/search/movie?api_key=5349b69c770fce41df09c49c43dbcd6b&language=en-US&query=${query}&page=1&include_adult=false`
+    `https://api.themoviedb.org/3/search/movie?api_key=5349b69c770fce41df09c49c43dbcd6b&language=en-US&query=${query}&page=${pageNum}&include_adult=false`
   );
   // console.log(response.data.results);
   return response.data.results;
@@ -20,7 +20,7 @@ export const getMoviesById = async movieId => {
   const response = await axios.get(
     `https://api.themoviedb.org/3/movie/${movieId}?api_key=5349b69c770fce41df09c49c43dbcd6b&language=en-US`
   );
-  console.log(response.data);
+  // console.log(response.data);
   return response.data;
 };
 
