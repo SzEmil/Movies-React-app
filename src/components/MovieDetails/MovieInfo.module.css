@@ -11,7 +11,7 @@
 }
 
 .movieInfoOverview {
-  width: 800px;
+  /* width: 800px; */
   font-style: normal;
   font-family: 'Roboto';
   font-weight: 300;
@@ -19,7 +19,7 @@
   line-height: 22px;
 }
 .movieInfoImg {
-  margin-right: 300px;
+  /* margin-right: 300px; */
   border-radius: 2px;
   border: 1px solid white;
 }
@@ -64,4 +64,34 @@
 }
 .movieInfoHomepageLink:hover {
   background-color: rgb(153, 0, 0);
+}
+
+@media screen and (min-width: 769px) {
+  .movieInfoOverview {
+    width: 800px;
+    font-style: normal;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .movieInfoImg {
+    margin-right: 300px;
+    border-radius: 2px;
+    border: 1px solid white;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .movieInfoContainer {
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 300;
+    /* border-bottom: 1px solid white;
+    border-top: 1px solid white; */
+  }
 }

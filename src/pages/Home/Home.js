@@ -29,7 +29,6 @@ const Home = () => {
 
   return (
     <div className={clsx(css.homeContainer)}>
-      <h2 className={clsx(css.title)}>Trending today</h2>
       {error && <p>Oh, something went wrong :c error: {error.message}</p>}
       {movies.length !== 0 && <MoviesList movies={movies} />}
       <Loader isLoading={isLoading} />
