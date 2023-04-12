@@ -19,7 +19,7 @@ export const SharedLayout = () => {
           <StyledLink to="/" className={clsx(css.logo)}>
             <img
               className={clsx(css.logoImg)}
-              src="https://scontent.xx.fbcdn.net/v/t1.15752-9/331877923_577736621071333_4370968066276411511_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=aee45a&_nc_ohc=Jgiozd7hq38AX-oIhR2&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTrVORXxu5jxBgxSbId8NoNckfLD3Mvid60DTzdv6xJMw&oe=6422129C"
+              src="https://scontent.xx.fbcdn.net/v/t1.15752-9/331877923_577736621071333_4370968066276411511_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeHLdYO9zecKVlQ6rwiP1rKT1fvYNRtcdcDV-9g1G1x1wIVOos-5R7AW3kSpmyLql9AZ2rCIxexh2O9Cnxl1dHVu&_nc_ohc=Bi8XEi75RxgAX9Jkdzz&_nc_ht=scontent.xx&oh=03_AdSnN9zFIuhOWcGt3V2QdnbOoOXxHe1vsbNoIWF-Nkc9Gw&oe=645DD69C"
               alt="logo pic"
             />
           </StyledLink>
